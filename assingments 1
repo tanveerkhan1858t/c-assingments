@@ -1,0 +1,96 @@
+QUESTION (1):
+//what do you mean by arrays give one example of array and how you can decalred an array?
+//ans:-An array is a fundamental data structure in programming that stores a fixed-size, sequential collection of elements of the same data type.
+// 💡EXAMPLE OF AN ARRAY:
+//array name :sores
+//data type :int(intiger)
+//size :5 elements
+
+// Index, Value 
+//  0     85
+//  1     92
+//  2     78
+//  3     95
+//  4     88
+// to access the third score(78),you would use the index 2: scores[2.]
+
+// DECLARATION:-
+//The exact syntax for declaring an array varies between programming languages. Here is a common general structure, followed by an example in a C-style language (like C, C++, or //Java):
+//General Syntax
+//DataType ArrayName[ArraySize];
+//or
+//DataType[] ArrayName = {value1, value2, ...}; // Initialization during declaration
+
+Q2. What do you mean by functions? Write the types of functions and give one example in code of each type? Ans. #include <stdio.h> int main() { int num; printf("Enter a number: "); scanf("%d", &num);
+printf("You entered: %d", num); return 0; } User defined function Example #include <stdio.h> void greet() {
+printf("Hello, Welcome to C Programming!"); }
+
+int main() { greet();
+return 0; }
+
+Q3. WHAT DO YOU MEAN BY POINTERS? WRITE A CODE HOW YOU CAN INITIALISE THE POINTER.
+
+ ANS:-A Pointer is a variable that stores the memory address of another variable.
+.The address-of operator (&) is used to get the memory address of a variable.
+.The dereference operator (*) is used to access the value stored at the memory address held by the pointer.
+
+Code Example: Declaring and Initializing a Pointer
+
+#include <stdio.h>
+
+int main() {
+    // 1. Declare a normal integer variable
+    int num = 42;
+
+    // 2. Declare a pointer variable (must be of the same type as the variable it points to)
+    // The '*' indicates that 'ptr_num' is a pointer to an integer.
+    int *ptr_num;
+
+    // 3. Initialize the pointer:
+    // Store the memory address of 'num' into 'ptr_num' using the address-of operator (&).
+    ptr_num = &num;
+
+    // Output:
+    printf("Value of num: %d\n", num);                  // 42
+    printf("Address of num (and value of ptr_num): %p\n", &num);
+    printf("Value at the address pointed to by ptr_num (*ptr_num): %d\n", *ptr_num); // 42
+
+    return 0;
+}
+Q4. What are the types of array? Write in a code 1D & 2D included? Ans. #include <stdio.h> int main() { // 1D Array Example int marks[3] = {85, 90, 95}; printf("1D Array elements:\n"); for(int i = 0; i < 3; i++) { printf("%d ", marks[i]); }
+
+// 2D Array Example
+int matrix[2][2] = {{1, 2}, {3, 4}};
+printf("\n\n2D Array elements:\n");
+for(int i = 0; i < 2; i++) {
+    for(int j = 0; j < 2; j++) {
+        printf("%d ", matrix[i][j]);
+    }
+    printf("\n");
+}
+return 0;
+}
+
+Q5. Explain the types of Operators in code? Ans. #include <stdio.h> int main() { int a = 10, b = 5;
+
+// Arithmetic Operators
+printf("Addition: %d\n", a + b);
+printf("Subtraction: %d\n", a - b);
+
+// Relational Operators
+printf("Is a greater than b? %d\n", a > b);
+
+// Logical Operators
+printf("Logical AND (a>5 && b<10): %d\n", (a > 5 && b < 10));
+
+// Assignment Operators
+a += 5;  // same as a = a + 5
+printf("After a += 5, a = %d\n", a);
+
+// Increment/Decrement Operators
+a++;
+b--;
+printf("After increment a=%d, after decrement b=%d\n", a, b);
+
+return 0;
+}
